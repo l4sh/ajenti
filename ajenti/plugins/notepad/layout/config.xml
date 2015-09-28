@@ -1,7 +1,14 @@
 <box>
     <vc binder:context="classconfig">
         <formline text="{Topmost directory}">
-            <textbox bind="[root]" />
+            <tooltip text="{If isolation is enabled enter the same value for the File Manager's topmost directory}">
+                  <textbox bind="[root]" />
+            </tooltip>
+        </formline>
+        <formline text="{Isolate users}">
+            <tooltip text="{This option must be enabled in the File Manager module as well.}">
+                  <checkbox bind="[isolate]" text="{Enable}" />
+            </tooltip>
         </formline>
     </vc>
 </box>
